@@ -1,4 +1,6 @@
 #include <GL/glut.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 int colorIndex = 0;
 float colors[10][3] = {
@@ -58,6 +60,8 @@ void display()
 {
     glClear(GL_COLOR_BUFFER_BIT);
     Bresenham(0, 0, 0, 0);
+
+    printf("start_x: %d, start_y: %d\n", start_x, start_y);
     Bresenham(start_x, start_y, end_x, end_y);
     glFlush();
 }
